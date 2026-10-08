@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablero de Tareas — U4</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Tablero de Tareas del Equipo</h1>
+  </header>
+
+  <section id="controles">
+    <input type="text" id="input-titulo"      placeholder="Título de la tarea">
+    <input type="text" id="input-descripcion" placeholder="Descripción">
+    <select id="select-prioridad">
+      <option value="baja">Prioridad baja</option>
+      <option value="media">Prioridad media</option>
+      <option value="alta">Prioridad alta</option>
+    </select>
+    <button id="btn-agregar">Agregar Tarea</button>
+  </section>
+
+  <section id="filtros">
+    <div class="filtro-grupo">
+      <button class="btn-filtro-estado" data-estado="todas">Todas</button>
+      <button class="btn-filtro-estado" data-estado="pendiente">Pendientes</button>
+      <button class="btn-filtro-estado" data-estado="en-progreso">En progreso</button>
+      <button class="btn-filtro-estado" data-estado="completada">Completadas</button>
+    </div>
+    <select id="select-filtro-prioridad">
+      <option value="todas">Todas las prioridades</option>
+      <option value="baja">Solo baja</option>
+      <option value="media">Solo media</option>
+      <option value="alta">Solo alta</option>
+    </select>
+  </section>
+
+  <section id="stats"></section>
+
+  <main id="tablero"></main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

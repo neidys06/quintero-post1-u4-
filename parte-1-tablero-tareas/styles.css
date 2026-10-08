@@ -1,0 +1,107 @@
+/* ─── Base ─────────────────────────────────────────── */
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+  margin: 0;
+  padding: 1.5rem;
+}
+
+header h1 { text-align: center; margin-top: 0; }
+
+/* ─── Formulario y filtros ─────────────────────────── */
+#controles, #filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+input, select, button {
+  font: inherit;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+button { cursor: pointer; background: #fff; }
+button:hover { background: #e8eef5; }
+
+#btn-agregar { background: #1565c0; color: #fff; border-color: #1565c0; }
+#btn-agregar:hover { background: #0d47a1; }
+
+.filtro-grupo { display: flex; gap: 0.25rem; }
+
+.btn-filtro-estado { transition: background 0.2s, color 0.2s; }
+
+/* Botón de filtro seleccionado (Paso 8) */
+.btn-filtro-estado.activo {
+  background: #1565c0;
+  color: #fff;
+  border-color: #1565c0;
+}
+
+/* ─── Estadísticas (Paso 6) ────────────────────────── */
+#stats {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* ─── Tablero y tarjetas (Pasos 4 y 5) ─────────────── */
+#tablero {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+/* Mensaje cuando no hay tareas que mostrar (tablero vacío o filtro sin resultados) */
+#tablero:empty::before {
+  content: "No hay tareas para mostrar.";
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #777;
+  padding: 2rem;
+}
+
+.tarea {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  border-left: 6px solid #999;
+}
+
+.tarea h3 { margin: 0.5rem 0 0.25rem; }
+.tarea p  { margin: 0 0 0.75rem; color: #555; }
+
+/* Borde según prioridad */
+.prioridad-alta  { border-left-color: #c62828; }
+.prioridad-media { border-left-color: #f57f17; }
+.prioridad-baja  { border-left-color: #2e7d32; }
+
+/* Badges */
+.badge-prioridad, .badge-estado {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  color: #fff;
+  margin-right: 0.25rem;
+}
+.prioridad-alta  .badge-prioridad { background: #c62828; }
+.prioridad-media .badge-prioridad { background: #f57f17; }
+.prioridad-baja  .badge-prioridad { background: #2e7d32; }
+
+/* Color según estado (Paso 7) */
+.estado-pendiente   .badge-estado { background: #757575; }
+.estado-en-progreso .badge-estado { background: #1565c0; }
+.estado-completada  .badge-estado { background: #2e7d32; }
+.estado-completada h3 { text-decoration: line-through; opacity: 0.7; }
+
+/* Botones de cada tarjeta */
+.acciones-tarea { display: flex; gap: 0.5rem; }
+.btn-eliminar { color: #c62828; border-color: #c62828; }
