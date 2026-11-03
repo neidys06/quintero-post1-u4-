@@ -1,0 +1,112 @@
+/* ─── Base ─────────────────────────────────────────── */
+* { box-sizing: border-box; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+  margin: 0;
+  padding: 1.5rem;
+}
+
+.contenedor {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+/* ─── Campos ───────────────────────────────────────── */
+.campo-grupo { margin-bottom: 1rem; }
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  width: 100%;
+  font: inherit;
+  padding: 0.5rem;
+  border: 2px solid #bbb;
+  border-radius: 6px;
+  background: #fff;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #90caf9;
+  outline-offset: 1px;
+}
+
+/* ─── Retroalimentación visual (mostrarError / limpiarError) ─── */
+.valido   { border-color: #2e7d32 !important; }
+.invalido { border-color: #c62828 !important; }
+
+/* Mensajes de error: ocultos hasta que el JS agrega .visible */
+.msg-error {
+  display: none;
+  color: #c62828;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+.msg-error.visible { display: block; }
+
+/* ─── Checkbox de términos ─────────────────────────── */
+.campo-checkbox label {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.campo-checkbox input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+/* El borde del checkbox no cambia de color, así que se resalta la etiqueta */
+.campo-checkbox:has(.invalido) label { color: #c62828; }
+
+/* ─── Campo condicional y mensaje de éxito ─────────── */
+.oculto { display: none; }
+
+#mensaje-exito {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 6px;
+  text-align: center;
+}
+#mensaje-exito.visible { display: block; }
+
+/* ─── Indicador de fortaleza (Paso 10) ─────────────── */
+#fortaleza {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+/* ─── Botón de envío ───────────────────────────────── */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.7rem;
+  font: inherit;
+  background: #1565c0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button[type="submit"]:hover { background: #0d47a1; }
