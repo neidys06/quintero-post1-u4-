@@ -272,3 +272,12 @@ La captura `chk23.png` muestra en la consola que, al pasar a "Tester",
 
 **Paso 10 — Indicador de fortaleza: Fuerte**
 ![Fortaleza fuerte](parte-2-formulario-colaborador/capturas/chk74.png)
+
+## Referencias
+
+- MDN Web Docs. *Constraint validation*. https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation
+- MDN Web Docs. *ValidityState*. https://developer.mozilla.org/en-US/docs/Web/API/ValidityState
+- MDN Web Docs. *Closures*. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+- MDN Web Docs. *Event delegation* (Introduction to events). https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling
+- MDN Web Docs. *Array.prototype.reduce()*. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+- WHATWG. *HTML Living Standard — Form submission / constraints*. https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#constraints
