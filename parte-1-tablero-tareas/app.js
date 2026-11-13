@@ -27,9 +27,11 @@ const leerCampo = (selector) => {
 const tablero = document.querySelector("#tablero");
 
 // ─── Configuración por prioridad ───────────────────────────────────
-// Checkpoint de comprensión: (reescribe esto con tus propias palabras)
-// Uso switch porque todas las ramas comparan la misma variable contra
-// valores fijos conocidos, sin rangos ni condiciones compuestas.
+// Checkpoint de comprensión: aquí siempre se pregunta por la misma variable
+// (prioridad) y solo puede valer "alta", "media" o "baja", que se conocen de
+// antemano. Un switch deja cada caso en una línea clara y el default cubre
+// cualquier valor raro; con if/else-if repetiría "prioridad ===" en cada rama
+// sin ganar nada, porque no hay rangos ni condiciones combinadas.
 function obtenerConfigPrioridad(prioridad) {
   switch (prioridad) {
     case "alta":
