@@ -52,8 +52,10 @@ select:focus {
 }
 
 /* ─── Retroalimentación visual (mostrarError / limpiarError) ─── */
-.valido   { border-color: #2e7d32 !important; }
-.invalido { border-color: #c62828 !important; }
+/* Especificidad (0,2,0) > (0,1,1) de input[type="text"], así que el color
+   de validación gana sin necesidad de !important */
+.campo-grupo .valido   { border-color: #2e7d32; }
+.campo-grupo .invalido { border-color: #c62828; }
 
 /* Mensajes de error: ocultos hasta que el JS agrega .visible */
 .msg-error {
